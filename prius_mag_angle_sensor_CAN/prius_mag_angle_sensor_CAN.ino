@@ -6,7 +6,7 @@
 //CAN
 struct can_frame canMsg1;
 struct can_frame canMsg2;
-MCP2515 mcp2515(3);
+MCP2515 mcp2515(8); // PB0 for the Seeed CAN Bed
 
 //ANGSENSOR
 #define EncoderCS1 10
