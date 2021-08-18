@@ -33,7 +33,7 @@ void setup() {
 void loop() {
   //ANGSENSOR
   encoder1Reading = Encoder1.readEncoder(); //READ the ANGSENSOR
-  //Serial.println(encoder1Reading);
+  Serial.println(encoder1Reading);
 
   rate = abs(encoder1Reading) - abs(lastencoder1Reading);
 
@@ -51,19 +51,7 @@ void loop() {
   canMsg1.data[6] = (rate >> 0) & 0xFF;
   canMsg1.data[7] = can_cksum (canMsg1.data, 7, 0x230); //Toyota CAN CHECKSUM
 
-  canMsg2.can_id  = 0x220;
-  canMsg2.can_dlc = 8;
-  canMsg2.data[0] = 0x0E;
-  canMsg2.data[1] = 0x00;
-  canMsg2.data[2] = 0x00;
-  canMsg2.data[3] = 0x08;
-  canMsg2.data[4] = 0x01;
-  canMsg2.data[5] = 0x00;
-  canMsg2.data[6] = 0x00;
-  canMsg2.data[7] = 0xA0;
-
   mcp2515.sendMessage(&canMsg1);
-  //mcp2515.sendMessage(&canMsg2); //Only send message 1. Reserve for future use!
 
   //Serial.println(canMsg1.data[4]);
   
