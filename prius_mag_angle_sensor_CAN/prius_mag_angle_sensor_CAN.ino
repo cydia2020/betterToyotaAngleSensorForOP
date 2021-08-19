@@ -6,7 +6,7 @@
 //CAN
 struct can_frame canMsg1;
 struct can_frame canMsg2;
-MCP2515 mcp2515(8); // PB0 for the Seeed CAN Bed
+MCP2515 mcp2515(17);
 
 //ANGSENSOR
 #define EncoderCS1 10
@@ -33,7 +33,6 @@ void setup() {
 void loop() {
   //ANGSENSOR
   encoder1Reading = Encoder1.readEncoder(); //READ the ANGSENSOR
-  Serial.println(encoder1Reading);
 
   rate = abs(encoder1Reading) - abs(lastencoder1Reading);
 
@@ -52,8 +51,6 @@ void loop() {
   canMsg1.data[7] = can_cksum (canMsg1.data, 7, 0x230); //Toyota CAN CHECKSUM
 
   mcp2515.sendMessage(&canMsg1);
-
-  //Serial.println(canMsg1.data[4]);
   
   delay(10);
 
