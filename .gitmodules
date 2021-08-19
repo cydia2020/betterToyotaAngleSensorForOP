@@ -1,3 +1,6 @@
 [submodule "angle_sensor_code/libraries/Seeed_Arduino_CAN"]
 	path = angle_sensor_code/libraries/Seeed_Arduino_CAN
 	url = https://github.com/Seeed-Studio/Seeed_Arduino_CAN
+[submodule "angle_sensor_code/libraries/Encoder-Buffer-Library"]
+	path = angle_sensor_code/libraries/Encoder-Buffer-Library
+	url = https://github.com/SuperDroidRobots/Encoder-Buffer-Library
