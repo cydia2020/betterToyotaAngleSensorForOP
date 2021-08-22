@@ -1,7 +1,9 @@
 Arduino Project to send AS5047P magnetic rotary encoder value to CAN, based on @zorrobyte 's angle sensor project.
 
+The project is originally intended for the Seeed Studio CANBed, your mileage may vary if you use other boards.
+
 Parts:
-1. Arduino (ATMega328P or ATMega32U4)
+1. Arduino (ATMega32U4)
 2. LS7366R
 3. CAN Bus Shield or adapter
 4. AS5047P magnetic encoder
