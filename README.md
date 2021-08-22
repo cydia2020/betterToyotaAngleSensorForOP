@@ -11,5 +11,5 @@ Parts:
 Hook-up Guide:
 1. Connect Arduino to CAN Bus Shield
 2. Connect LS7366R to Arduino via SPI bus
-3. Connect AS5047P module to LS7366R via A/B/I
+3. Connect AS5047P module to LS7366R via A/B/GND/5V
 4. Connect CAN Bus to application
