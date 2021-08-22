@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   //ANGSENSOR
-  encoder1Reading = (Encoder1.readEncoder() * (760 / 3)); //READ the ANGSENSOR
+  encoder1Reading = (Encoder1.readEncoder() * 253.7); // hand tuned multiplier
 
   rate = abs(encoder1Reading) - abs(lastencoder1Reading);
 
