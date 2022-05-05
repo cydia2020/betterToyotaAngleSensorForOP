@@ -40,7 +40,7 @@ void loop() {
 
   CAN.sendMsgBuf(0x23, 0, 8, SensorMsg);
   
-  delay(125/11);
+  delay(10);
 }
 
 //TOYOTA CAN CHECKSUM
