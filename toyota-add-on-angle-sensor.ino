@@ -29,14 +29,14 @@ void loop() {
   lastencoder1Reading = encoder1Reading;
 
   // parse CAN message
-  SensorMsg[0] = (encoder1Reading >> 24) & 0xFF; //Bitshift the ANGSENSOR (Cabana errors with 32 bit)
+  SensorMsg[0] = (encoder1Reading >> 24) & 0xFF;
   SensorMsg[1] = (encoder1Reading >> 16) & 0xFF;
   SensorMsg[2] = (encoder1Reading >> 8) & 0xFF;
   SensorMsg[3] = (encoder1Reading >> 0) & 0xFF;
   SensorMsg[4] = (rate >> 16) & 0xFF;
   SensorMsg[5] = (rate >> 8) & 0xFF;
   SensorMsg[6] = (rate >> 0) & 0xFF;
-  SensorMsg[7] = can_cksum (SensorMsg, 7, 0x230); //Toyota CAN CHECKSUM
+  SensorMsg[7] = can_cksum(SensorMsg, 7, 0x23);
 
   unsigned long currentTime = millis();
 
