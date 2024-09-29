@@ -4,3 +4,9 @@
 [submodule "angle_sensor_code/libraries/Encoder-Buffer-Library"]
 	path = angle_sensor_code/libraries/Encoder-Buffer-Library
 	url = https://github.com/SuperDroidRobots/Encoder-Buffer-Library
+[submodule "libraries/Seeed_Arduino_CAN"]
+	path = libraries/Seeed_Arduino_CAN
+	url = git@github.com:cydia2020/Seeed_Arduino_CAN.git
+[submodule "libraries/Encoder-Buffer-Library"]
+	path = libraries/Encoder-Buffer-Library
+	url = git@github.com:SuperDroidRobots/Encoder-Buffer-Library.git
