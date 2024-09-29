@@ -15,11 +15,10 @@ Encoder_Buffer Encoder1(10);
 
 unsigned char SensorMsg[8] = {};
 unsigned long lastMessageTime = 0;
-const unsigned long messageInterval = 12.5;
+const unsigned long messageInterval = 12;
 
 void setup() {
   CAN.begin(CAN_500KBPS);
-
   Encoder1.initEncoder();
 }
 
